@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1f2409d129.js" crossorigin="anonymous"></script>
+   <!-- favicon -->
+   <link rel="shortcut icon" href="Assets/images/favicon/favicon khairah.png" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="stylesheet" href="Assets/CSS/media.css">
+
+    <script src="Assets/JS/app.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+
+    <title>Khairah</title>
+</head>
+
+<body>
+    <a class="text-decoration-none" href="#">
+        <button id="top-go"
+            class="vanish text-white py-1 z-3 border-0 top-go bg-orange shadow-circle position-fixed bottom-0 end-0 rounded-circle ">
+            <i class="fa-solid fs-1 fa-circle-up fa-bounce"></i>
+        </button>
+    </a>
+    <nav class="z-3 top-0 nav py-3 border-bottom-alpha bg_1">
+        <div class="container d-flex f-direction-column align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <div class="d-inline-block  text-white border-end border-light pe-2" style="--bs-border-opacity: .5">
+                    Visit
+                    our official website</div>
+                <div class="social-icons ms-3 text-white d-flex  justify-content-between">
+                    <i class="fa-brands fa-facebook-f round b"></i>
+                    <i class="fab ms-3 fa-twitter"></i>
+                    <i class="fab ms-3 fa-pinterest-p"></i>
+                    <i class="fab ms-3 fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div id="location" class="d-flex align-items-center">
+                <div class="text-white p-sm-2 me-3">
+                    <i class="fa-solid me-1 fa-location-dot"></i><span>28 Street, New York City, USA</span>
+                </div>
+                <div class="text-white">
+                    <i class="fi far me-1 fa-envelope"></i><span>Khairah@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-section">
+        <div id="sidebar" style="top: 0;z-index: 5 !important;" class="transform-100 position-fixed bg-grey w-50 z-2 h-100">
+            <div class="d-flex justify-content-end py-4 align-items-center">
+                <button id="cross" class="btn bg-transparent py-2 px-3 text-white border-white"><i
+                        class="fa-sharp fa-solid fa-xmark"></i></button>
+            </div>
+            <ul class="justify-content-between p-0 col-10  fw-bold">
+                <li>
+                    <a class="text-white w-100 text-decoration-none fw-semibold" href="#">Home</a>
+                </li>
+                <li>
+                    <a class="text-white text-decoration-none fw-semibold" href="#">About</a>
+                </li>
+                <li>
+                    <a class="text-white text-decoration-none fw-semibold" href="#">Cause</a>
+                </li>
+                <li>
+                    <a class="text-white text-decoration-none fw-semibold" href="#">Pages</a>
+                </li>
+                <li>
+                    <a class="text-white text-decoration-none fw-semibold" href="#">Shop</a>
+                </li>
+                <li>
+                    <a class="text-white text-decoration-none fw-semibold" href="#">Blog</a>
+                </li>
+                <li>
+                    <a class="text-white text-decoration-none fw-semibold" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex  mt-0 align-items-center justify-content-between ">
+            <div class="d-none display-block">
+                <button id="toogle" class="p-2 bg-orange"><i class="fa-sharp fa-solid fa-bars"></i></button>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="logo ms-3 col-lg-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid" width="250" height="83"
+                        viewBox="0 0 447 83" fill="none">
+                        <path
+                            d="M98.29 65C98.0733 65 97.8783 64.935 97.705 64.805C97.575 64.6317 97.51 64.4367 97.51 64.22V20.28C97.51 20.0633 97.575 19.89 97.705 19.76C97.8783 19.5867 98.0733 19.5 98.29 19.5H104.27C104.487 19.5 104.66 19.5867 104.79 19.76C104.963 19.89 105.05 20.0633 105.05 20.28V38.22C105.05 38.3933 105.093 38.5017 105.18 38.545C105.267 38.545 105.353 38.48 105.44 38.35L115.19 20.085C115.407 19.695 115.732 19.5 116.165 19.5H122.6C122.903 19.5 123.098 19.5867 123.185 19.76C123.272 19.9333 123.25 20.15 123.12 20.41L113.37 38.675C113.327 38.8483 113.305 38.9783 113.305 39.065L123.835 64.09C123.878 64.1767 123.9 64.3067 123.9 64.48C123.9 64.8267 123.683 65 123.25 65H116.815C116.338 65 116.035 64.805 115.905 64.415L108.235 45.63C108.192 45.5 108.127 45.4567 108.04 45.5C107.953 45.5 107.867 45.5433 107.78 45.63L105.18 49.985C105.093 50.1583 105.05 50.2883 105.05 50.375V64.22C105.05 64.4367 104.963 64.6317 104.79 64.805C104.66 64.935 104.487 65 104.27 65H98.29ZM144.932 20.28C144.932 20.0633 144.997 19.89 145.127 19.76C145.3 19.5867 145.495 19.5 145.712 19.5H151.692C151.908 19.5 152.082 19.5867 152.212 19.76C152.385 19.89 152.472 20.0633 152.472 20.28V64.22C152.472 64.4367 152.385 64.6317 152.212 64.805C152.082 64.935 151.908 65 151.692 65H145.712C145.495 65 145.3 64.935 145.127 64.805C144.997 64.6317 144.932 64.4367 144.932 64.22V45.825C144.932 45.6083 144.823 45.5 144.607 45.5H136.352C136.135 45.5 136.027 45.6083 136.027 45.825V64.22C136.027 64.4367 135.94 64.6317 135.767 64.805C135.637 64.935 135.463 65 135.247 65H129.267C129.05 65 128.855 64.935 128.682 64.805C128.552 64.6317 128.487 64.4367 128.487 64.22V20.28C128.487 20.0633 128.552 19.89 128.682 19.76C128.855 19.5867 129.05 19.5 129.267 19.5H135.247C135.463 19.5 135.637 19.5867 135.767 19.76C135.94 19.89 136.027 20.0633 136.027 20.28V38.61C136.027 38.8267 136.135 38.935 136.352 38.935H144.607C144.823 38.935 144.932 38.8267 144.932 38.61V20.28ZM177.923 65C177.403 65 177.121 64.7617 177.078 64.285L175.843 57.46C175.843 57.2433 175.713 57.135 175.453 57.135H165.963C165.703 57.135 165.573 57.2433 165.573 57.46L164.338 64.285C164.295 64.7617 164.013 65 163.493 65H157.578C156.971 65 156.733 64.7183 156.863 64.155L166.483 20.215C166.57 19.7383 166.851 19.5 167.328 19.5H174.218C174.695 19.5 174.976 19.7383 175.063 20.215L184.683 64.155V64.415C184.683 64.805 184.445 65 183.968 65H177.923ZM166.743 50.895C166.7 51.1117 166.808 51.22 167.068 51.22H174.283C174.543 51.22 174.651 51.1117 174.608 50.895L170.838 30.355C170.795 30.225 170.73 30.16 170.643 30.16C170.556 30.16 170.491 30.225 170.448 30.355L166.743 50.895ZM189.887 65C189.67 65 189.475 64.935 189.302 64.805C189.172 64.6317 189.107 64.4367 189.107 64.22V20.28C189.107 20.0633 189.172 19.89 189.302 19.76C189.475 19.5867 189.67 19.5 189.887 19.5H195.867C196.083 19.5 196.257 19.5867 196.387 19.76C196.56 19.89 196.647 20.0633 196.647 20.28V64.22C196.647 64.4367 196.56 64.6317 196.387 64.805C196.257 64.935 196.083 65 195.867 65H189.887Z"
+                            fill="white"></path>
+                        <path
+                            d="M221.648 65C221.214 65 220.933 64.7833 220.803 64.35L215.278 45.695C215.191 45.5217 215.083 45.435 214.953 45.435H211.508C211.291 45.435 211.183 45.5433 211.183 45.76V64.22C211.183 64.4367 211.096 64.6317 210.923 64.805C210.793 64.935 210.619 65 210.403 65H204.423C204.206 65 204.011 64.935 203.838 64.805C203.708 64.6317 203.643 64.4367 203.643 64.22V20.28C203.643 20.0633 203.708 19.89 203.838 19.76C204.011 19.5867 204.206 19.5 204.423 19.5H216.643C218.939 19.5 220.954 20.0633 222.688 21.19C224.464 22.2733 225.829 23.8333 226.783 25.87C227.779 27.8633 228.278 30.16 228.278 32.76C228.278 35.4467 227.758 37.765 226.718 39.715C225.678 41.665 224.226 43.1383 222.363 44.135C222.189 44.1783 222.124 44.3083 222.168 44.525L228.538 64.09C228.581 64.1767 228.603 64.285 228.603 64.415C228.603 64.805 228.364 65 227.888 65H221.648ZM211.508 26C211.291 26 211.183 26.1083 211.183 26.325V39.26C211.183 39.4767 211.291 39.585 211.508 39.585H215.473C217.033 39.585 218.289 38.9783 219.243 37.765C220.239 36.5517 220.738 34.905 220.738 32.825C220.738 30.745 220.239 29.0983 219.243 27.885C218.289 26.6283 217.033 26 215.473 26H211.508ZM252.572 65C252.052 65 251.77 64.7617 251.727 64.285L250.492 57.46C250.492 57.2433 250.362 57.135 250.102 57.135H240.612C240.352 57.135 240.222 57.2433 240.222 57.46L238.987 64.285C238.943 64.7617 238.662 65 238.142 65H232.227C231.62 65 231.382 64.7183 231.512 64.155L241.132 20.215C241.218 19.7383 241.5 19.5 241.977 19.5H248.867C249.343 19.5 249.625 19.7383 249.712 20.215L259.332 64.155V64.415C259.332 64.805 259.093 65 258.617 65H252.572ZM241.392 50.895C241.348 51.1117 241.457 51.22 241.717 51.22H248.932C249.192 51.22 249.3 51.1117 249.257 50.895L245.487 30.355C245.443 30.225 245.378 30.16 245.292 30.16C245.205 30.16 245.14 30.225 245.097 30.355L241.392 50.895ZM280.2 20.28C280.2 20.0633 280.265 19.89 280.395 19.76C280.568 19.5867 280.763 19.5 280.98 19.5H286.96C287.177 19.5 287.35 19.5867 287.48 19.76C287.653 19.89 287.74 20.0633 287.74 20.28V64.22C287.74 64.4367 287.653 64.6317 287.48 64.805C287.35 64.935 287.177 65 286.96 65H280.98C280.763 65 280.568 64.935 280.395 64.805C280.265 64.6317 280.2 64.4367 280.2 64.22V45.825C280.2 45.6083 280.092 45.5 279.875 45.5H271.62C271.403 45.5 271.295 45.6083 271.295 45.825V64.22C271.295 64.4367 271.208 64.6317 271.035 64.805C270.905 64.935 270.732 65 270.515 65H264.535C264.318 65 264.123 64.935 263.95 64.805C263.82 64.6317 263.755 64.4367 263.755 64.22V20.28C263.755 20.0633 263.82 19.89 263.95 19.76C264.123 19.5867 264.318 19.5 264.535 19.5H270.515C270.732 19.5 270.905 19.5867 271.035 19.76C271.208 19.89 271.295 20.0633 271.295 20.28V38.61C271.295 38.8267 271.403 38.935 271.62 38.935H279.875C280.092 38.935 280.2 38.8267 280.2 38.61V20.28Z"
+                            fill="#26B75E"></path>
+                        <g clip-path="url(#clip0_609_34)">
+                            <path
+                                d="M2.14565 32.0598C1.90183 33.764 1.77992 35.5049 1.77992 37.2826C1.77992 57.4012 17.9942 73.7069 38 73.7069C58.0058 73.7069 74.2201 57.4012 74.2201 37.2826C74.2201 35.5049 74.0982 33.764 73.8543 32.0598C75.2441 36.0443 76 40.323 76 44.7857C76 65.8851 58.9811 83 38 83C17.0189 83 0 65.8851 0 44.7857C0 40.323 0.755859 36.0443 2.14565 32.0598Z"
+                                fill="#58C22F"></path>
+                            <path
+                                d="M18.0796 59.0072C23.651 66.5839 35.0619 66.1057 33.0138 50.5111C32.5383 46.9189 29.2589 39.6855 26.333 36.878C29.7222 36.5347 33.5136 42.8118 37.7562 41.7942C41.9987 40.7766 45.8633 33.2 45.8633 33.2C45.8633 33.2 50.7886 63.9603 34.9644 69.8696C22.0051 74.7 18.0796 59.0072 18.0796 59.0072Z"
+                                fill="#FFA510"></path>
+                            <path
+                                d="M32.6647 36.6219C31.6772 34.8889 32.2736 32.679 33.9968 31.6859C35.7201 30.6927 37.9177 31.2925 38.9052 33.0255C39.8928 34.7585 39.2964 36.9684 37.5731 37.9615C35.8498 38.9547 33.6523 38.3549 32.6647 36.6219Z"
+                                fill="#FFA510"></path>
+                            <path
+                                d="M18.349 31.5966C16.7534 30.84 16.0699 28.9259 16.8222 27.3213C17.5746 25.7167 19.478 25.0293 21.0736 25.7859C22.6692 26.5425 23.3527 28.4566 22.6004 30.0612C21.848 31.6658 19.9446 32.3532 18.349 31.5966Z"
+                                fill="#58C22F"></path>
+                            <path
+                                d="M30.1001 72.8733C39.2923 76.4777 55.5797 58.1736 47.6798 31.0668C47.6798 31.0668 55.1652 38.2756 59.4078 37.258C63.6503 36.2405 67.5271 28.2715 72.1232 28.0018C68.4049 31.8269 67.9416 35.5294 65.0889 44.7979C62.0898 54.5201 57.3475 65.7257 50.5082 70.7646C37.2198 80.548 30.1001 72.8733 30.1001 72.8733Z"
+                                fill="#58C22F"></path>
+                            <path
+                                d="M54.8288 32.187C53.8413 30.454 54.4377 28.244 56.1609 27.2509C57.8842 26.2578 60.0818 26.8575 61.0693 28.5905C62.0569 30.3235 61.4605 32.5335 59.7372 33.5266C58.0139 34.5197 55.8164 33.9199 54.8288 32.187Z"
+                                fill="#58C22F"></path>
+                            <path
+                                d="M30.9657 53.527C26.8572 54.4098 22.8098 51.3693 23.273 42.3827C23.4437 39.1583 25.8332 32.5257 28.2227 29.8285C25.187 29.7672 22.2855 35.5907 18.4575 34.99C14.6295 34.3892 10.6795 27.965 10.6795 27.965C10.6795 27.965 8.50947 55.4641 22.9073 59.657C27.0523 60.8708 31.3924 58.6517 30.9657 53.527Z"
+                                fill="#259CDF"></path>
+                            <path
+                                d="M60.8463 6.43649C60.8463 6.43649 60.2611 16.3793 53.9949 19.3217C53.9949 19.3217 53.239 15.3617 56.1771 11.5979C53.7876 12.6155 52.5563 15.1533 52.4953 17.9609C52.4953 17.9609 48.5332 14.9572 52.154 10.5926C55.7748 6.22807 60.8463 6.43649 60.8463 6.43649Z"
+                                fill="#58C22F"></path>
+                            <path
+                                d="M15.1537 6.43649C15.1537 6.43649 15.7388 16.3793 22.0051 19.3217C22.0051 19.3217 22.761 15.3617 19.8229 11.5979C22.2124 12.6155 23.4437 15.1533 23.5046 17.9609C23.5046 17.9609 27.4668 14.9572 23.846 10.5926C20.2252 6.22807 15.1537 6.43649 15.1537 6.43649Z"
+                                fill="#259CDF"></path>
+                            <path
+                                d="M40.0359 0C40.0359 0 44.1688 9.04786 40.0116 14.6016C40.0116 14.6016 37.488 11.4631 38.3292 6.75524C36.6955 8.7904 36.7931 11.5979 38.0488 14.1112C38.0488 14.1112 33.1479 13.3388 34.3061 7.77282C35.4642 2.21905 40.0359 0 40.0359 0Z"
+                                fill="#FFA510"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_609_34">
+                                <rect width="76" height="83" fill="white" transform="matrix(-1 0 0 1 76 0)"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="nav-links display-none-992 d-flex align-items-center  justify-content-between col-10 mt-4">
+                    <ul class="d-flex justify-content-between p-0 col-10">
+                        <li>
+                            <a class="text-white  text-decoration-none fw-semibold" href="#">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none fw-semibold" href="#">About</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none fw-semibold" href="#">Cause</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none fw-semibold" href="#">Pages</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none fw-semibold" href="#">Shop</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none fw-semibold" href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none fw-semibold" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <section class="text-white d-flex align-items-center">
+                    <div class="position-relative">
+                        <div id="search-icon">
+                            <i id="icon1"
+                                class="fa-sharp p-3 bg-darkBlue rounded-circle opacity-75 fa-solid fa-magnifying-glass"></i>
+                            <i id="icon2"
+                                class="fa-sharp p-3 bg-darkBlue rounded-circle opacity-75 fa-solid fa-xmark vanish"></i>
+                        </div>
+                        <div id="search-bar"
+                            class="position-absolute popup vanish shadow-circle rounded-3 end-100 px-lg-5 px-md-5 px-sm-4 px-2 py-4 z-5 bg-white top-100 ">
+                            <input class="fs-5 py-2 px-3 rounded-3 outline-0 border border-opacity-10"
+                                placeholder="Search here" type="text">
+                        </div>
+                    </div>
+
+                    <div class="position-relative ms-1 me-4">
+                        <i
+                            class="fa-solid p-3 rounded-circle position-relative bg-darkBlue opacity-75  fa-bag-shopping">
+                        </i>
+                        <span class="fs-13 py-lg-0 px-2 rounded-circle bg-orange position-absolute right-10 top-11">
+                            5
+                        </span>
+                    </div>
+                    <div>
+                        <button class="py-2 display-none-992 px-5 text-start fs-4 text-white  bg-orange me-3"> Join
+                            <br>volenteer</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <section class="text-white">
+            <div class="position-relative">
+                <img class="img-fluid position-absolute z-0 display-none-992" src="Assets/images/shape.png">
+            </div>
+            <div class="ms-5 d-sm-flex d-flex flex-column flex-sm-column justify-content-between h-60-768">
+                <div class="position-relative mt-5">
+                    <img class="img-fluid text-center" src="Assets/images/comment.png" alt="">
+                    <span class="position-absolute text-white fs-3 left-30 top-3">go for help</span>
+                </div>
+                <div class="frame-subtitle fs-120 col-lg-6 col-md-9 col-sm-11">
+                    <p class=" position-relative z-1 lh-1 fw-bold">
+                        They are wait for some food
+                    </p>
+                </div>
+                <div class="frame-text mt-md-4 col-lg-5  col-md-9 col-sm-11 position-relative  z-1">
+                    <p class="fs-5">Charity is the act of giving help or support, typically in the form of money, time,
+                        or resources,
+                        to those who are in need, disadvantaged, or suffering in some way. </p>
+                </div>
+                <div class="frame-btn position-relative z-1 mt-4 mb-md-4">
+                    <button class="bg-light-green fs-4 text-white border-0 py-3 px-5">
+                        Donate now <i class="fa fa-angle-double-right fs-6"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="main-section-2">
+        <div class="container d-flex justify-content-between">
+
+            <div class="img-section2 display-none-992 col-6 position-relative">
+
+                <div class="w-575 h-575   rounded-circle overflow-hidden position-absolute img-section2-shadow">
+                    <img class="h-100 rounded-circle object-fit-cover" src="Assets/images/about-2.jpeg">
+                </div>
+            </div>
+            <div class="text-section2 position-relative text-sm-center text-md-center text-lg-start z-1 col-lg-6 mt-5">
+                <div class="d-flex justify-content-md-center justify-content-lg-start mt-5">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-fluid text-center" src="Assets/images/comment3.png" alt="">
+                        <span class="position-absolute text-dark fs-4 fw-bold  mt-1">About us</span>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <p class="section2-text fw-semibold lh-sm">
+                        Khairah is <span class="text-warning ">Nonprofit</span> Organization <span
+                            class="text-success">For
+                            Help
+                        </span> Poor Children.
+                    </p>
+                </div>
+                <div class="mt-2">
+                    <p class="content-section2 opacity-50 fs-4 lh-sm">
+                        Nonprofit organizations can take many different forms, including charities, foundations, social
+                        welfare organizations, religious organizations, and more. They can range in size from small
+                        grassroots organizations run by volunteers
+                    </p>
+                </div>
+                <div class="d-flex about_imgs-section2 justify-content-lg-start justify-content-md-center mt-5">
+                    <section class="d-flex  align-items-center">
+                        <div class="bg_about_icon1 p-4 rounded-circle">
+                            <img class="img-fluid" src="Assets/images/about-icon-1.png">
+                        </div>
+                        <div>
+                            <h2 class="fw-bold ms-1">Save <br>The Childerns.</h2>
+                        </div>
+                    </section>
+                    <section class="d-flex  align-items-center ms-2">
+                        <div class="bg_about_icon2 p-4 rounded-circle">
+                            <img class="img-fluid" src="Assets/images/about-icon-2.png">
+                        </div>
+                        <div>
+                            <h2 class="fw-bold ms-1">Fresh And<br>Clean Water.</h2>
+                        </div>
+                    </section>
+                </div>
+                <div class="frame-btn position-relative z-1 mt-lg-5 mt-md-3 mb-5">
+                    <button class="bg-light-green fs-5  text-white border-0 py-3 px-5 mb-5">
+                        MORE ABOUT US
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="position-relative display-none-1200 bottom-550">
+            <img class="position-absolute z-0 end-0 display-none-992" src="Assets/images/shape2.png">
+        </div>
+
+    </div>
+    <section class="main-section-3  py-5 d-flex flex-col-992 align-items-center text-white h-100-sm">
+        <div class="container flex-col-992 d-flex">
+            <section id="section1_3" class="col-lg-5 position-relative col-12 text-md-center text-lg-start">
+                <div class="d-flex position-relative z-2 justify-content-md-center mt-5 justify-content-lg-start">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-fluid text-center" src="Assets/images/comment3.png" alt="">
+                        <span class="position-absolute fs-4 fw-bold  mt-1 ">Features</span>
+                    </div>
+                </div>
+                <div class="mt-3 position-relative z-2 mb-4">
+                    <div class="fs-48 lh-1 fw-bold   fs-40-768">
+                        The great journey to end poverty for good begins with a child.
+                    </div>
+                </div>
+                <div class="position-absolute top-0 display-none-992 opacity-50 z-1">
+                    <img class="img-fluid" src="Assets/images/v1.png" alt="">
+                </div>
+                <div class="section3-text fs-5 position-relative z-2 opacity-75 ">
+                    Charity benefits can have a significant impact on the success of a non-profit organization, both in
+                    terms of fundraising.
+                </div>
+                <div class="frame-btn position-relative z-1 mt-lg-5 mt-md-3 mb-5">
+                    <button class="bg-light-green fs-5 mt-3 text-white border-0 py-3 px-5">
+                        Donate Now <i class="fa fa-angle-double-right fs-6"></i>
+                    </button>
+                </div>
+            </section>
+            <section class="d-flex flex-column col-lg-7  h-75-sm col-12 justify-content-lg-between">
+                <div class="justify-content-between flex-col-sm w-100 d-flex">
+                    <div
+                        class="box-item bg-light-green w-100-sm py-5 w-48 h-50-sm px-5 h-90 d-flex justify-content-center align-items-center">
+                        <div class="content my-2 d-flex flex-column align-items-center">
+                            <div
+                                class="bg-white shadow-circle h-112 w-112 d-flex justify-content-center align-items-center rounded-circle">
+                                <img src="Assets/images/feature-icon-1.png" alt="">
+                            </div>
+                            <div class="fs-3 fw-bold text-white ">Cancer Treatment</div>
+                        </div>
+                    </div>
+                    <div class="bg-warning  box-item w-48 w-100-sm px-5 py-2  d-flex justify-content-center align-items-center">
+                        <div class="content my-2 d-flex flex-column align-items-center">
+                            <div class="bg-white h-112 w-112 d-flex justify-content-center align-items-center shadow-circle rounded-circle">
+                                <img src="Assets/images/feature-icon-2.png" alt="">
+                            </div>
+                            <div class="fs-3 fw-bold text-white ">Hospital Build</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="justify-content-between flex-col-sm-reverse w-100 d-flex">
+                    <div
+                        class="bg-warning active box-item w-48 w-100-sm px-5 py-2  d-flex justify-content-center align-items-center">
+                        <div class="content my-2 d-flex flex-column align-items-center">
+                            <div
+                                class="bg-white h-112 w-112 d-flex justify-content-center align-items-center shadow-circle rounded-circle">
+                                <img src="Assets/images/feature-icon-3.png" alt="">
+                            </div>
+                            <div class="fs-3 fw-bold text-white ">Environment recycle</div>
+                        </div>
+                    </div>
+                    <div
+                        class="box-item bg-light-green px-5  py-5 w-100-sm d-flex justify-content-center w-48 align-items-center">
+                        <div class="content  d-flex flex-column align-items-center">
+                            <div
+                                class="bg-white shadow-circle h-112 w-112 d-flex justify-content-center align-items-center rounded-circle">
+                                <img src="Assets/images/feature-icon-4.png" alt="">
+                            </div>
+                            <div class="fs-3 fw-bold text-white">Food & Build Home</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="main-section-4  mt-5 mb-5 d-flex flex-column">
+        <div class="container mb-5 d-flex justify-content-center flex-column align-items-center mb-5">
+            <section class="d-flex col-lg-6 col-md-10 col-12  flex-column align-items-center text-center">
+                <div class="d-flex position-relative z-2 justify-content-md-center  justify-content-lg-start">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-fluid text-center" src="Assets/images/comment3.png" alt="">
+                        <span class="position-absolute fs-5 fw-bold  mt-1 ">CAUSES</span>
+                    </div>
+                </div>
+                <div class="fs-40 fw-bold fs-35-lg text-darkBlue lh-1  mt-3">
+                    Latest Caused of Khairah.
+                </div>
+                <div class="fs-5 opacity-50 mt-3">
+                    Charity benefits can have a significant impact on the success of a non-profit organization, both in
+                    terms of fundraising and in raising awareness.
+                </div>
+            </section>
+            <section class="cards-section4  d-flex w-100-md over flex-column flex-lg-row  mt-5">
+                <div class="card-item  col-12 me-2 col-lg-4">
+                    <div class="card  shadow-lg py-5 px-3 border-top-green rounded-3">
+                        <div
+                            class="card-img shadow-lg  position-relative rounded-circle d-flex justify-content-center align-items-center">
+                            <img class="w-100 h-100 rounded-circle" src="Assets/images/case-3.jpg" alt="">
+                            <div class="card-btn d-none frame-btn position-absolute z-1 ">
+                                <button class="bg-light-green fs-5 mt-3 text-white border-0 py-2 px-4">
+                                    Donate Now <i class="fa fa-angle-double-right fs-6"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-4">
+                            <button
+                                class="bg-light-green me-2 px-3 px-md-5 px-sm-5 px-lg-5 border-0 text-white fw-bold py-2 fs-5 rounded-5">Raised:
+                                <br>40.0000</button>
+                            <button
+                                class="bg-orange px-3 px-md-5 px-sm-5 px-lg-5 border-0 text-white fw-bold py-2 fs-5 rounded-5">Goal:
+                                <br>40.0000</button>
+                        </div>
+                        <div class="fs-3 fw-bold mt-4 text-center">
+                            Send Child to School for a Year
+                        </div>
+                        <div class="fs-5 opacity-50 text-center mt-2 mb-1">
+                            Education can significantly alter a person’s <br> life and positively affect society
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item  col-lg-4 me-2  col-12">
+                    <div class="card shadow-lg  py-5 px-3 border-top-green rounded-3">
+                        <div
+                            class="card-img shadow-lg  position-relative rounded-circle d-flex justify-content-center align-items-center">
+                            <img class="w-100 h-100 rounded-circle" src="Assets/images/case-2.jpg" alt="">
+                            <div class="card-btn d-none frame-btn position-absolute z-1 ">
+                                <button class="bg-light-green fs-5 mt-3 text-white border-0 py-2 px-4">
+                                    Donate Now <i class="fa fa-angle-double-right fs-6"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-4">
+                            <button
+                                class="bg-light-green me-2 px-3 px-md-5 px-sm-5 px-lg-5 border-0 text-white fw-bold py-2 fs-5 rounded-5">Raised:
+                                <br>40.0000</button>
+                            <button
+                                class="bg-orange px-3 px-md-5 px-sm-5 px-lg-5 border-0 text-white fw-bold py-2 fs-5 rounded-5">Goal:
+                                <br>40.0000</button>
+                        </div>
+                        <div class="fs-3 fw-bold mt-4 text-center">
+                            Food And Home for Children
+                        </div>
+                        <div class="fs-5 opacity-50 text-center mt-2 mb-1">
+                            We are working to improve education for <br> poor children around the world.
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item  col-lg-4  col-12">
+                    <div class="card shadow-lg  py-5 px-3 border-top-green rounded-3">
+                        <div
+                            class="card-img shadow-lg  position-relative rounded-circle d-flex justify-content-center align-items-center">
+                            <img class="w-100 h-100 rounded-circle" src="Assets/images/case-1.jpg" alt="">
+                            <div class="card-btn d-none frame-btn position-absolute z-1 ">
+                                <button class="bg-light-green fs-5 mt-3 text-white border-0 py-2 px-4">
+                                    Donate Now <i class="fa fa-angle-double-right fs-6"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-4">
+                            <button
+                                class="bg-light-green me-2 px-3 px-md-5 px-sm-5 px-lg-5 border-0 text-white fw-bold py-2 fs-5 rounded-5">Raised:
+                                <br>40.0000$</button>
+                            <button
+                                class="bg-orange px-3 px-md-5 px-sm-5 px-lg-5  border-0 text-white fw-bold py-2 fs-5 rounded-5">Goal:
+                                <br>40.0000$</button>
+                        </div>
+                        <div class="fs-3 fw-bold mt-4 text-center">
+                            Education for Poor Children
+                        </div>
+                        <div class="fs-5 opacity-50 text-center mt-2 mb-1">
+                            Education can significantly alter a person’s <br> life and positively affect society.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+    </section>
+    <section class="main-section-5 mt-80 h-100 bg-darkBlue">
+        <div class="container text-white py-5 d-flex flex-column flex-lg-row">
+            <div class="fw-bold fs-40 col-lg-5 col-12 text-center mt-5 text-lg-start  ps-5 pe-5 fs-35-md">If You Want To
+                Join
+                As a
+                Volunteer.
+                Contact
+                Today!
+            </div>
+            <div class="col-lg-7 d-flex align-items-center mt-5 justify-content-around col-12">
+                <div class="text-center">
+                    <div class="fs-1">Call Us!</div>
+                    <div class="fs-1 fw-bold text-warning">00968469876</div>
+                </div>
+                <div class="text-center ">
+                    <div class="fs-1">E-mail Us!</div>
+                    <div class="fs-1 fw-bold text-success">support@gmail.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-section-6">
+        <div class="mt-80 mb-5 d-flex flex-column justify-content-center align-items-center">
+            <section class="d-flex col-lg-6 col-md-10 col-12  flex-column align-items-center text-center">
+                <div class="d-flex position-relative z-2 justify-content-md-center  justify-content-lg-start">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-fluid text-center" src="Assets/images/comment3.png" alt="">
+                        <span class="position-absolute fs-5 fw-bold  mt-1 ">EVENTS</span>
+                    </div>
+                </div>
+                <div class="fs-40 fw-bold fs-35-lg text-darkBlue lh-1  mt-3">
+                    Our Upcoming Events
+                </div>
+                <div class="fs-5 opacity-50 mt-3">
+                    Charity benefits can have a significant impact on the success of a non-profit organization, both in
+                    terms of fundraising and in raising awareness about their work..
+                </div>
+            </section>
+            <section class="card-section6 flex-col-767 flex-row mt-5 container-fluid d-flex justify-content-between">
+                <div class="card-item6">
+                    <div class="card px-5 border-0 shadow-lg pb-5">
+                        <div class="card-img-6 overflow-hidden">
+                            <img class="img-fluid" src="Assets/images/el-event-2.jpg" alt="">
+                        </div>
+                        <div class="fs-6 mt-5 d-flex align-items-center">
+                            <i class="fa-sharp text-success me-3 fa-solid fa-location-dot"></i>
+
+                            <div class="opacity-50">4059 Carling Avenue, Singapore</div>
+                        </div>
+                        <div class="card6-text fs-5 mt-3 fw-bold">Be Kind For The Poor People And The Kids.</div>
+                        <div class="d-flex col-12 justify-content-between mt-3 opacity-50">
+                            <p><i class="fa-sharp fa-solid fa-calendar-days me-2 text-danger"></i>March 18, 2023</p>
+                            <p><i class="fa-sharp fa-solid fa-clock text-danger me-2"></i>9:00 AM - 10:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item6">
+                    <div class="card px-5 ms-lg-4 border-0 shadow-lg pb-5">
+                        <div class="card-img-6 overflow-hidden">
+                            <img class="img-fluid" src="Assets/images/el-event-3.jpg" alt="">
+                        </div>
+                        <div class="fs-6 mt-5 d-flex align-items-center">
+                            <i class="fa-sharp text-success me-3 fa-solid fa-location-dot"></i>
+
+                            <div class="opacity-50">4059 Carling Avenue, Singapore</div>
+                        </div>
+                        <div class="card6-text fs-5 mt-3 fw-bold">Be Kind For The Poor People And The Kids.</div>
+                        <div class="d-flex col-12 justify-content-between mt-3 opacity-50">
+                            <p><i class="fa-sharp fa-solid fa-calendar-days me-2 text-danger"></i>March 18, 2023</p>
+                            <p><i class="fa-sharp fa-solid fa-clock text-danger me-2"></i>9:00 AM - 10:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item6">
+                    <div class="card px-5 ms-lg-4 border-0 shadow-lg pb-5">
+                        <div class="card-img-6 overflow-hidden">
+                            <img class="img-fluid" src="Assets\images\el-event-2.jpg" alt="">
+                        </div>
+                        <div class="fs-6 mt-5 d-flex align-items-center">
+                            <i class="fa-sharp text-success me-3 fa-solid fa-location-dot"></i>
+
+                            <div class="opacity-50">4059 Carling Avenue, Singapore</div>
+                        </div>
+                        <div class="card6-text fs-5 mt-3 fw-bold">Be Kind For The Poor People And The Kids.</div>
+                        <div class="d-flex col-12 justify-content-between mt-3 opacity-50">
+                            <p><i class="fa-sharp fa-solid fa-calendar-days me-2 text-danger"></i>March 18, 2023</p>
+                            <p><i class="fa-sharp fa-solid fa-clock text-danger me-2"></i>9:00 AM - 10:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="main-section-7">
+        <div class="container mt-80 d-flex flex-column justify-content-center align-items-center">
+            <section class="d-flex col-lg-6 col-md-10 col-12 mb-5  flex-column align-items-center text-center">
+                <div class="d-flex position-relative z-2 justify-content-md-center  justify-content-lg-start">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-fluid text-center" src="Assets/images/comment3.png" alt="">
+                        <span class="position-absolute fs-5 fw-bold  mt-1 ">VOLUNTEER</span>
+                    </div>
+                </div>
+                <div class="fs-40 fw-bold fs-35-lg text-darkBlue lh-1  mt-3">
+                    Our Great Volunteer
+                </div>
+                <div class="fs-5 opacity-50 mt-3 ">
+                    It is a long established fact that reader distracted by the the readable content off page looking at
+                    its layout point.
+                </div>
+            </section>
+            <section class="card-section7 flex-col-767 d-flex justify-content-between">
+                <div class="card-item7 me-3 mb-3">
+                    <div class="card border-0">
+                        <div>
+                            <img class="img-fluid" src="Assets/images/team-1.jpg" alt="">
+                        </div>
+                        <div class="text-center mt-4 py-2 shadow-lg">
+                            <div class="fs-3">Adriane Newby</div>
+                            <div class="fs-4 opacity-50">Volunteer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item7 me-3 mb-3">
+                    <div class="card border-0">
+                        <div>
+                            <img class="img-fluid" src="Assets/images/team-22.jpg" alt="">
+                        </div>
+                        <div class="text-center mt-4 py-2 shadow-lg">
+                            <div class="fs-3">Allene Castaneda</div>
+                            <div class="fs-4 opacity-50">Organizer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item7 me-3 mb-3">
+                    <div class="card border-0">
+                        <div>
+                            <img class="img-fluid" src="Assets/images/team-3.jpg" alt="">
+                        </div>
+                        <div class="text-center mt-4 py-2 shadow-lg">
+                            <div class="fs-3">Malinda Willoughby</div>
+                            <div class="fs-4 opacity-50">Volunteer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item7 ">
+                    <div class="card border-0">
+                        <div>
+                            <img class="img-fluid" src="Assets/images/team-4.jpg" alt="">
+                        </div>
+                        <div class="text-center mt-4 py-2 shadow-lg">
+                            <div class="fs-3">Wilburn Hatfield</div>
+                            <div class="fs-4 opacity-50">Project Manager</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="main-section-8 bg-darkBlue mt-80 main-section-8">
+        <div class="container position-relative py-5 d-flex flex-column justify-content-center align-items-center">
+            <button id="left"
+                class="p-4  d-none-576 rounded-circle bg-warning position-absolute text-black fw-bold start-0 ms-5"><i
+                    class="fa fa-angle-double-left fs-6" aria-hidden="true"></i></button>
+            <button id="right" class="p-4 d-none-576 rounded-circle bg-warning end-0 position-absolute me-5"><i
+                    class="fa fa-angle-double-right fs-6" aria-hidden="true"></i></button>
+
+            <div class="position-relative">
+                <div class="img-slider-8">
+                    <img class="img-slider position-relative" src="Assets/images/testi-image.png" alt="">
+                    <img class="img-slider position-relative vanish" src="Assets/images/test-image-2.png" alt="">
+                </div>
+            </div>
+            <div class="star star-slider d-flex col-lg-2 col-md-5 fs-4 col-sm-7 col-8 mt-4 justify-content-between">
+                <i class="fa-sharp star active fa-solid fa-star"></i>
+                <i class="fa-sharp star active fa-solid fa-star"></i>
+                <i class="fa-sharp star active fa-solid fa-star"></i>
+                <i class="fa-sharp star active fa-solid fa-star"></i>
+                <i class="fa-sharp star active fa-solid fa-star"></i>
+            </div>
+            <div
+                class=" star d-flex star-slider col-lg-2 col-md-5 fs-4 col-sm-7 col-8 mt-4 justify-content-between d-none">
+                <i class="fa-sharp  star active fa-solid fa-star"></i>
+                <i class="fa-sharp  star active fa-solid fa-star"></i>
+                <i class="fa-sharp  star active fa-solid fa-star"></i>
+                <i class="fa-sharp  fa-solid fa-star"></i>
+                <i class="fa-sharp  fa-solid fa-star"></i>
+            </div>
+            <div class="text-white mt-4 fs-4 col-lg-6 col-md-8 col-sm-10 text-center  col-12">"Lorem ipsum dolor sit,
+                amet
+                consectetur
+                adipisicing elit. Ea tempore, quam ipsum
+                alias facilis
+                aspernatur harum neque corrupti. Eum tenetur nesciunt laboriosam eius, minima aperiam, dignissimos
+                maxime, quo temporibus ipsum itaque.</div>
+            <div class="text-warning fs-2 mt-4 fw-bold">
+                <p class="text-slider">Twana BlackMan</p>
+                <p class="text-slider vanish">Mictheal jean</p>
+            </div>
+            <div class="mt-2 text-success fs-6">
+                Volenteer
+            </div>
+        </div>
+    </section>
+    <section class="main-section-9">
+        <div class="container mt-80 d-flex flex-column justify-content-center align-items-center">
+            <section class="d-flex col-lg-6 col-md-10 col-12 mb-5  flex-column align-items-center text-center">
+                <div class="d-flex position-relative z-2 justify-content-md-center  justify-content-lg-start">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-fluid text-center" src="Assets/images/comment3.png" alt="">
+                        <span class="position-absolute fs-5 fw-bold  mt-1 ">BLOG</span>
+                    </div>
+                </div>
+                <div class="fs-40 fw-bold fs-35-lg text-darkBlue lh-1  mt-3">
+                    Our Latest News
+                </div>
+                <div class="fs-5 opacity-50 mt-3 ">
+                    Charity benefits can have a significant impact on the success of a non-profit organization, both in
+                    terms of fundraising and in raising awareness
+                </div>
+            </section>
+            <section class="card-section9 flex-col-767 flex-row mt-5 container-fluid d-flex justify-content-between">
+                <div class="card-item9 mb-4">
+                    <div class="card d-flex justify-content-center align-items-center border-0 shadow-lg pb-4">
+                        <div class="card-img-9 position-relative">
+                            <img class="img-fluid" src="Assets/images/post-grid-22.jpg" alt="">
+                            <div
+                                class="calender position-absolute text-center ms-3 lh-1 px-3 py-1 top-90 bg-danger-subtle bg-opacity-10">
+                                <span style="letter-spacing: 2px;" class="text-danger fs-2 fw-bold">18</span>
+                                <p class="opacity-50 fw-semibold">Mar</p>
+                            </div>
+                        </div>
+                        <div class="fs-3 mt-5 d-flex  ms-4 align-items-center">
+                            <div class="">
+                                <div class=" fw-bold text-darkBlue2">
+                                    Make A Difference In The Fight Against Hunger With Charity
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-text fs-5 mt-3 ms-4 me-2 opacity-50">Charity refers to the act of voluntarily
+                            giving
+                            help,
+                            aid, or assistance to those in need,</div>
+                        <div class="d-flex justify-content-between align-items-center mt-4 mb-1 col-10 pt-4 border-top">
+                            <section class="d-flex align-items-center">
+                                <div class="img-9 w-25 rounded-circle">
+                                    <img class="img-fluid rounded-circle" src="Assets/images/admin.jpeg" alt="">
+                                </div>
+                                <div class="fs-4 ms-2">admin</div>
+                            </section>
+                            <section class="date">
+                                <div class="fs-5 fw-bold opacity-50">18 March, 2023</div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item9 mb-4 ms-lg-3 ms-md-2">
+                    <div class="card d-flex justify-content-center align-items-center border-0 shadow-lg pb-4">
+                        <div class="card-img-9 position-relative">
+                            <img class="img-fluid" src="Assets/images/post-grid-3-1.jpg" alt="">
+                            <div
+                                class="calender position-absolute text-center ms-3 lh-1 px-3 py-1 top-90 bg-danger-subtle bg-opacity-10">
+                                <span style="letter-spacing: 1px;" class="text-danger fs-2 fw-bold">28</span>
+                                <p class="opacity-50 fw-semibold">Feb</p>
+                            </div>
+                        </div>
+                        <div class="fs-3 mt-5 d-flex  ms-4 align-items-center">
+                            <div class="">
+                                <div class=" fw-bold text-darkBlue2">
+                                    Help Us Bring Clean Water Africa With Our Charity Event
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-text fs-5 mt-3 ms-4 me-2 opacity-50">Charity refers to the act of voluntarily
+                            giving
+                            help,
+                            aid, or assistance to those in need,</div>
+                        <div class="d-flex justify-content-between align-items-center mt-4 mb-1 col-10 pt-4 border-top">
+                            <section class="d-flex align-items-center">
+                                <div class="img-9 w-25 rounded-circle">
+                                    <img class="img-fluid rounded-circle" src="Assets/images/admin.jpeg" alt="">
+                                </div>
+                                <div class="fs-4 ms-2">admin</div>
+                            </section>
+                            <section class="date">
+                                <div class="fs-5 fw-bold opacity-50">28 February, 2023</div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item9 mb-4 ms-lg-3 ms-md-2">
+                    <div class="card d-flex justify-content-center align-items-center border-0 shadow-lg pb-4">
+                        <div class="card-img-9 position-relative">
+                            <img class="img-fluid" src="Assets/images/post-grid-22.jpg" alt="">
+                            <div
+                                class="calender position-absolute text-center ms-3 lh-1 px-3 py-1 top-90 bg-danger-subtle bg-opacity-10">
+                                <span style="letter-spacing: 2px;" class="text-danger fs-2 fw-bold">08</span>
+                                <p class="opacity-50 fw-semibold">Jan</p>
+                            </div>
+                        </div>
+                        <div class="fs-3 mt-5 d-flex  ms-4 align-items-center">
+                            <div class="">
+                                <div class=" fw-bold text-darkBlue2">
+                                    Join Us In Supporting Children With Our Charity Drive
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-text fs-5 mt-3 ms-4 me-2 opacity-50">Charity refers to the act of voluntarily
+                            giving
+                            help,
+                            aid, or assistance to those in need,</div>
+                        <div class="d-flex justify-content-between align-items-center mt-4 mb-1 col-10 pt-4 border-top">
+                            <section class="d-flex align-items-center">
+                                <div class="img-9 w-25 rounded-circle">
+                                    <img class="img-fluid rounded-circle" src="Assets/images/admin.jpeg" alt="">
+                                </div>
+                                <div class="fs-4 ms-2">admin</div>
+                            </section>
+                            <section class="date">
+                                <div class="fs-5 fw-bold opacity-50">08 January, 2023</div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="footer mt-80 bg-grey text-white">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row py-5 border-bottom-alpha justify-content-between mt-5">
+
+                <div class="col-12 col-lg-6 d-flex flex-column flex-lg-row flex-md-row flex-sm-column">
+                    <section
+                        class="d-flex justify-content-between col-12 col-lg-12 flex-lg-row flex-md-row flex-sm-column">
+                        <div class="col-lg-7 pe-5  border-success border-end border-opacity-25">
+                            <div class="logo ms-3 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid" width="250" height="83"
+                                    viewBox="0 0 447 83" fill="none">
+                                    <path
+                                        d="M98.29 65C98.0733 65 97.8783 64.935 97.705 64.805C97.575 64.6317 97.51 64.4367 97.51 64.22V20.28C97.51 20.0633 97.575 19.89 97.705 19.76C97.8783 19.5867 98.0733 19.5 98.29 19.5H104.27C104.487 19.5 104.66 19.5867 104.79 19.76C104.963 19.89 105.05 20.0633 105.05 20.28V38.22C105.05 38.3933 105.093 38.5017 105.18 38.545C105.267 38.545 105.353 38.48 105.44 38.35L115.19 20.085C115.407 19.695 115.732 19.5 116.165 19.5H122.6C122.903 19.5 123.098 19.5867 123.185 19.76C123.272 19.9333 123.25 20.15 123.12 20.41L113.37 38.675C113.327 38.8483 113.305 38.9783 113.305 39.065L123.835 64.09C123.878 64.1767 123.9 64.3067 123.9 64.48C123.9 64.8267 123.683 65 123.25 65H116.815C116.338 65 116.035 64.805 115.905 64.415L108.235 45.63C108.192 45.5 108.127 45.4567 108.04 45.5C107.953 45.5 107.867 45.5433 107.78 45.63L105.18 49.985C105.093 50.1583 105.05 50.2883 105.05 50.375V64.22C105.05 64.4367 104.963 64.6317 104.79 64.805C104.66 64.935 104.487 65 104.27 65H98.29ZM144.932 20.28C144.932 20.0633 144.997 19.89 145.127 19.76C145.3 19.5867 145.495 19.5 145.712 19.5H151.692C151.908 19.5 152.082 19.5867 152.212 19.76C152.385 19.89 152.472 20.0633 152.472 20.28V64.22C152.472 64.4367 152.385 64.6317 152.212 64.805C152.082 64.935 151.908 65 151.692 65H145.712C145.495 65 145.3 64.935 145.127 64.805C144.997 64.6317 144.932 64.4367 144.932 64.22V45.825C144.932 45.6083 144.823 45.5 144.607 45.5H136.352C136.135 45.5 136.027 45.6083 136.027 45.825V64.22C136.027 64.4367 135.94 64.6317 135.767 64.805C135.637 64.935 135.463 65 135.247 65H129.267C129.05 65 128.855 64.935 128.682 64.805C128.552 64.6317 128.487 64.4367 128.487 64.22V20.28C128.487 20.0633 128.552 19.89 128.682 19.76C128.855 19.5867 129.05 19.5 129.267 19.5H135.247C135.463 19.5 135.637 19.5867 135.767 19.76C135.94 19.89 136.027 20.0633 136.027 20.28V38.61C136.027 38.8267 136.135 38.935 136.352 38.935H144.607C144.823 38.935 144.932 38.8267 144.932 38.61V20.28ZM177.923 65C177.403 65 177.121 64.7617 177.078 64.285L175.843 57.46C175.843 57.2433 175.713 57.135 175.453 57.135H165.963C165.703 57.135 165.573 57.2433 165.573 57.46L164.338 64.285C164.295 64.7617 164.013 65 163.493 65H157.578C156.971 65 156.733 64.7183 156.863 64.155L166.483 20.215C166.57 19.7383 166.851 19.5 167.328 19.5H174.218C174.695 19.5 174.976 19.7383 175.063 20.215L184.683 64.155V64.415C184.683 64.805 184.445 65 183.968 65H177.923ZM166.743 50.895C166.7 51.1117 166.808 51.22 167.068 51.22H174.283C174.543 51.22 174.651 51.1117 174.608 50.895L170.838 30.355C170.795 30.225 170.73 30.16 170.643 30.16C170.556 30.16 170.491 30.225 170.448 30.355L166.743 50.895ZM189.887 65C189.67 65 189.475 64.935 189.302 64.805C189.172 64.6317 189.107 64.4367 189.107 64.22V20.28C189.107 20.0633 189.172 19.89 189.302 19.76C189.475 19.5867 189.67 19.5 189.887 19.5H195.867C196.083 19.5 196.257 19.5867 196.387 19.76C196.56 19.89 196.647 20.0633 196.647 20.28V64.22C196.647 64.4367 196.56 64.6317 196.387 64.805C196.257 64.935 196.083 65 195.867 65H189.887Z"
+                                        fill="white"></path>
+                                    <path
+                                        d="M221.648 65C221.214 65 220.933 64.7833 220.803 64.35L215.278 45.695C215.191 45.5217 215.083 45.435 214.953 45.435H211.508C211.291 45.435 211.183 45.5433 211.183 45.76V64.22C211.183 64.4367 211.096 64.6317 210.923 64.805C210.793 64.935 210.619 65 210.403 65H204.423C204.206 65 204.011 64.935 203.838 64.805C203.708 64.6317 203.643 64.4367 203.643 64.22V20.28C203.643 20.0633 203.708 19.89 203.838 19.76C204.011 19.5867 204.206 19.5 204.423 19.5H216.643C218.939 19.5 220.954 20.0633 222.688 21.19C224.464 22.2733 225.829 23.8333 226.783 25.87C227.779 27.8633 228.278 30.16 228.278 32.76C228.278 35.4467 227.758 37.765 226.718 39.715C225.678 41.665 224.226 43.1383 222.363 44.135C222.189 44.1783 222.124 44.3083 222.168 44.525L228.538 64.09C228.581 64.1767 228.603 64.285 228.603 64.415C228.603 64.805 228.364 65 227.888 65H221.648ZM211.508 26C211.291 26 211.183 26.1083 211.183 26.325V39.26C211.183 39.4767 211.291 39.585 211.508 39.585H215.473C217.033 39.585 218.289 38.9783 219.243 37.765C220.239 36.5517 220.738 34.905 220.738 32.825C220.738 30.745 220.239 29.0983 219.243 27.885C218.289 26.6283 217.033 26 215.473 26H211.508ZM252.572 65C252.052 65 251.77 64.7617 251.727 64.285L250.492 57.46C250.492 57.2433 250.362 57.135 250.102 57.135H240.612C240.352 57.135 240.222 57.2433 240.222 57.46L238.987 64.285C238.943 64.7617 238.662 65 238.142 65H232.227C231.62 65 231.382 64.7183 231.512 64.155L241.132 20.215C241.218 19.7383 241.5 19.5 241.977 19.5H248.867C249.343 19.5 249.625 19.7383 249.712 20.215L259.332 64.155V64.415C259.332 64.805 259.093 65 258.617 65H252.572ZM241.392 50.895C241.348 51.1117 241.457 51.22 241.717 51.22H248.932C249.192 51.22 249.3 51.1117 249.257 50.895L245.487 30.355C245.443 30.225 245.378 30.16 245.292 30.16C245.205 30.16 245.14 30.225 245.097 30.355L241.392 50.895ZM280.2 20.28C280.2 20.0633 280.265 19.89 280.395 19.76C280.568 19.5867 280.763 19.5 280.98 19.5H286.96C287.177 19.5 287.35 19.5867 287.48 19.76C287.653 19.89 287.74 20.0633 287.74 20.28V64.22C287.74 64.4367 287.653 64.6317 287.48 64.805C287.35 64.935 287.177 65 286.96 65H280.98C280.763 65 280.568 64.935 280.395 64.805C280.265 64.6317 280.2 64.4367 280.2 64.22V45.825C280.2 45.6083 280.092 45.5 279.875 45.5H271.62C271.403 45.5 271.295 45.6083 271.295 45.825V64.22C271.295 64.4367 271.208 64.6317 271.035 64.805C270.905 64.935 270.732 65 270.515 65H264.535C264.318 65 264.123 64.935 263.95 64.805C263.82 64.6317 263.755 64.4367 263.755 64.22V20.28C263.755 20.0633 263.82 19.89 263.95 19.76C264.123 19.5867 264.318 19.5 264.535 19.5H270.515C270.732 19.5 270.905 19.5867 271.035 19.76C271.208 19.89 271.295 20.0633 271.295 20.28V38.61C271.295 38.8267 271.403 38.935 271.62 38.935H279.875C280.092 38.935 280.2 38.8267 280.2 38.61V20.28Z"
+                                        fill="#26B75E"></path>
+                                    <g clip-path="url(#clip0_609_34)">
+                                        <path
+                                            d="M2.14565 32.0598C1.90183 33.764 1.77992 35.5049 1.77992 37.2826C1.77992 57.4012 17.9942 73.7069 38 73.7069C58.0058 73.7069 74.2201 57.4012 74.2201 37.2826C74.2201 35.5049 74.0982 33.764 73.8543 32.0598C75.2441 36.0443 76 40.323 76 44.7857C76 65.8851 58.9811 83 38 83C17.0189 83 0 65.8851 0 44.7857C0 40.323 0.755859 36.0443 2.14565 32.0598Z"
+                                            fill="#58C22F"></path>
+                                        <path
+                                            d="M18.0796 59.0072C23.651 66.5839 35.0619 66.1057 33.0138 50.5111C32.5383 46.9189 29.2589 39.6855 26.333 36.878C29.7222 36.5347 33.5136 42.8118 37.7562 41.7942C41.9987 40.7766 45.8633 33.2 45.8633 33.2C45.8633 33.2 50.7886 63.9603 34.9644 69.8696C22.0051 74.7 18.0796 59.0072 18.0796 59.0072Z"
+                                            fill="#FFA510"></path>
+                                        <path
+                                            d="M32.6647 36.6219C31.6772 34.8889 32.2736 32.679 33.9968 31.6859C35.7201 30.6927 37.9177 31.2925 38.9052 33.0255C39.8928 34.7585 39.2964 36.9684 37.5731 37.9615C35.8498 38.9547 33.6523 38.3549 32.6647 36.6219Z"
+                                            fill="#FFA510"></path>
+                                        <path
+                                            d="M18.349 31.5966C16.7534 30.84 16.0699 28.9259 16.8222 27.3213C17.5746 25.7167 19.478 25.0293 21.0736 25.7859C22.6692 26.5425 23.3527 28.4566 22.6004 30.0612C21.848 31.6658 19.9446 32.3532 18.349 31.5966Z"
+                                            fill="#58C22F"></path>
+                                        <path
+                                            d="M30.1001 72.8733C39.2923 76.4777 55.5797 58.1736 47.6798 31.0668C47.6798 31.0668 55.1652 38.2756 59.4078 37.258C63.6503 36.2405 67.5271 28.2715 72.1232 28.0018C68.4049 31.8269 67.9416 35.5294 65.0889 44.7979C62.0898 54.5201 57.3475 65.7257 50.5082 70.7646C37.2198 80.548 30.1001 72.8733 30.1001 72.8733Z"
+                                            fill="#58C22F"></path>
+                                        <path
+                                            d="M54.8288 32.187C53.8413 30.454 54.4377 28.244 56.1609 27.2509C57.8842 26.2578 60.0818 26.8575 61.0693 28.5905C62.0569 30.3235 61.4605 32.5335 59.7372 33.5266C58.0139 34.5197 55.8164 33.9199 54.8288 32.187Z"
+                                            fill="#58C22F"></path>
+                                        <path
+                                            d="M30.9657 53.527C26.8572 54.4098 22.8098 51.3693 23.273 42.3827C23.4437 39.1583 25.8332 32.5257 28.2227 29.8285C25.187 29.7672 22.2855 35.5907 18.4575 34.99C14.6295 34.3892 10.6795 27.965 10.6795 27.965C10.6795 27.965 8.50947 55.4641 22.9073 59.657C27.0523 60.8708 31.3924 58.6517 30.9657 53.527Z"
+                                            fill="#259CDF"></path>
+                                        <path
+                                            d="M60.8463 6.43649C60.8463 6.43649 60.2611 16.3793 53.9949 19.3217C53.9949 19.3217 53.239 15.3617 56.1771 11.5979C53.7876 12.6155 52.5563 15.1533 52.4953 17.9609C52.4953 17.9609 48.5332 14.9572 52.154 10.5926C55.7748 6.22807 60.8463 6.43649 60.8463 6.43649Z"
+                                            fill="#58C22F"></path>
+                                        <path
+                                            d="M15.1537 6.43649C15.1537 6.43649 15.7388 16.3793 22.0051 19.3217C22.0051 19.3217 22.761 15.3617 19.8229 11.5979C22.2124 12.6155 23.4437 15.1533 23.5046 17.9609C23.5046 17.9609 27.4668 14.9572 23.846 10.5926C20.2252 6.22807 15.1537 6.43649 15.1537 6.43649Z"
+                                            fill="#259CDF"></path>
+                                        <path
+                                            d="M40.0359 0C40.0359 0 44.1688 9.04786 40.0116 14.6016C40.0116 14.6016 37.488 11.4631 38.3292 6.75524C36.6955 8.7904 36.7931 11.5979 38.0488 14.1112C38.0488 14.1112 33.1479 13.3388 34.3061 7.77282C35.4642 2.21905 40.0359 0 40.0359 0Z"
+                                            fill="#FFA510"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_609_34">
+                                            <rect width="76" height="83" fill="white" transform="matrix(-1 0 0 1 76 0)">
+                                            </rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="mt-3 fs-5">
+                                Charity benefits can have a significant impact on the success of a non-profit
+                                organization,
+                                both
+                                in terms of fundraising.
+                            </div>
+
+                            <div class="social-icons ms-3 mt-4 text-white d-flex  justify-content-between col-6">
+                                <i class="fa-brands fa-facebook-f round b"></i>
+                                <i class="fab ms-3 fa-twitter"></i>
+                                <i class="fab ms-3 fa-pinterest-p"></i>
+                                <i class="fab ms-3 fa-linkedin-in"></i>
+                            </div>
+
+                        </div>
+                        <div class="col-5 d-flex flex-column align-items-center">
+                            <div class="fs-3 fw-bold mt-2">Useful Links</div>
+                            <ul class="p-0 mt-3">
+                                <li class="mb-3">
+                                    <a class="text-white text-decoration-none fs-5 " href="#">- About Us</a>
+                                </li>
+                                <li class="my-3">
+                                    <a class="text-white text-decoration-none fs-5 " href="#">- Causes</a>
+                                </li>
+                                <li class="my-3">
+                                    <a class="text-white text-decoration-none fs-5 " href="#">- Volenteers</a>
+                                </li>
+                                <li class="my-3">
+                                    <a class="text-white text-decoration-none fs-5 " href="#">- Our Events</a>
+                                </li>
+                                <li class="my-3">
+                                    <a class="text-white text-decoration-none fs-5 " href="#">- Contact Us</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="  d-flex col-12 col-lg-6 flex-column flex-lg-row flex-md-row flex-sm-column">
+                    <section class="col-6 d-flex ms-2 flex-column">
+                        <div class="fs-3 fw-bold mt-1">
+                            Our Address
+                        </div>
+                        <div class="fs-5 mt-3">
+                            Hi everyone! Our office address is as follows: Feel free to contact
+                        </div>
+                        <div class="text-white mt-4 me-3">
+                            <i class="fa-solid me-2 fa-location-dot"></i><span class="fs-5">28 Street, New York
+                                City,
+                                USA</span>
+                        </div>
+                        <div class="text-white mt-3">
+                            <i class="fi far me-2 fa-envelope"></i><span class="fs-5">Khairah@gmail.com</span>
+                        </div>
+                        <div class="mt-3">
+                            <i class="fa-solid fa-mobile-screen-button me-2"></i><span class="fs-5">000123456789</span>
+                        </div>
+                    </section>
+                    <section class="col-6 d-flex ms-2 flex-column">
+                        <div class="fs-3 fw-bold mt-1">
+                            Newsletter
+                        </div>
+                        <div class="fs-5 mt-3 pe-4">
+                            You will be notified when somthing new will be appear.
+                        </div>
+                        <div class="mt-4 position-relative w-75  d-flex align-items-center">
+                            <div class="position-absolute d-none-576  end-11n">
+                                <button
+                                    class=" bg-orange opacity-100 z-2 px-3 border-0 rounded-2 pb-1 fs-4 text-white ">></button>
+                            </div>
+                            <input class="bg-light-grey outline-0  border-0 py-3 fs-5 px-4 rounded-3 " type="email"
+                                placeholder="Email Address *">
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center py-3  fs-5">
+                © Copyright 2023 | khairah - Charity WordPress Theme | All right reserved.
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
